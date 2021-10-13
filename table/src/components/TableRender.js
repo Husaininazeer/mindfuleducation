@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export class FetchData extends Component {
+export class TableRender extends Component {
   static propTypes = {};
 
   state = {
@@ -35,4 +35,4 @@ export class FetchData extends Component {
   }
 }
 
-export default FetchData;
+export default TableRender;
