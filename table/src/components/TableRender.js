@@ -24,28 +24,7 @@ function sortReducer(state, action) {
   }
 }
 
-// var obj;
-
-// // Fetching
-// function fetching() {
-//   const url =
-//     "https://mindfuleducation-cdn.s3.eu-west-1.amazonaws.com/misc/data.json";
-//   fetch(url)
-//     .then((res) => res.json())
-//     .then((result) => {
-//       obj = result.getColleges;
-//       console.log(obj); // this works!
-//       // var decoupledFetchedData = result.getColleges;
-//       // console.log("inside the fetch:", decoupledFetchedData);
-//       // return decoupledFetchedData;
-//     })
-//     .then(() => {
-//       console.log(obj); // works!
-//     });
-//   // undefined here!
-// }
-
-// console.log("outside the fetch", fetching()); // undefined
+// Async function for fetching
 
 async function fetching() {
   const url =
@@ -62,20 +41,19 @@ function TableRender() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [fetchedData, setFetchedData] = useState([]);
 
-  // fetching()
-  // setFetchedData(fetching());
+  // setFetchedData(fetching()) is not defined -> tried an async lambda func
   useEffect(() => {
     setIsLoaded(true);
     const fetchData = async () => {
       const response = await fetching();
       setFetchedData(response);
     };
-
+    // it works!
     fetchData();
-    // dispatch({ data: fetchedData });
   }, []);
 
-  // console.log(fetchedData);
+  // FIXME find a way to refernce the data in the reducer hook
+
   // states for sorting
   const [state, dispatch] = useReducer(sortReducer, {
     column: null,
