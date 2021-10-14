@@ -90,11 +90,12 @@ function TableRender() {
   } else {
     return (
       <div>
-        <Table celled fixed sortable>
+        <Table celled fixed sortable size="large">
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell
                 sorted={column === "name" ? direction : null}
+                width={2}
                 onClick={() =>
                   dispatch({
                     type: "CHANGE_SORT",
@@ -103,7 +104,7 @@ function TableRender() {
                   })
                 }
               >
-                name
+                Partners
               </Table.HeaderCell>
               <Table.HeaderCell>Prefix</Table.HeaderCell>
               <Table.HeaderCell>Logo/Preroll</Table.HeaderCell>
@@ -112,11 +113,11 @@ function TableRender() {
           </Table.Header>
           <Table.Body>
             {fetchedData.map(({ name, logo, ofstedRating, groupPrefix }) => (
-              <Table.Row key={name}>
+              <Table.Row textAlign="center" key={name}>
                 <Table.Cell>{name}</Table.Cell>
                 <Table.Cell>{groupPrefix}</Table.Cell>
                 <Table.Cell>
-                  <img src={logo} alt="mindfuleducation logo" />
+                  <img size="small" src={logo} alt="mindfuleducation logo" />
                 </Table.Cell>
                 <Table.Cell>{ofstedRating}</Table.Cell>
               </Table.Row>

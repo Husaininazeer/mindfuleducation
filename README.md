@@ -3,9 +3,9 @@
 ### Specification
 
 - [x] React app
-- [] ESLint
 - [x] Fetch JSON data
 - [x] Render data in a table
-  - [x] Use SemanticUi library
-- [] Alphabetical sorting, with toggle for opposite order
+  - [x] Use SemanticUi library to syle
+- [] Alphabetical sorting (almost?)
 - [] Search Function
+- [] ESLint
