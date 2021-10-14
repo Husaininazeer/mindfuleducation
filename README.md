@@ -1,9 +1,11 @@
 # MindfulEducation technical test
 
+### Specification
+
 - [x] React app
 - [] ESLint
 - [x] Fetch JSON data
-- [] Render data in a table
-  - [] Use SemanticUi library
-- [] Alphabetical Sorting, with toggle for opposite order
+- [x] Render data in a table
+  - [x] Use SemanticUi library
+- [] Alphabetical sorting, with toggle for opposite order
 - [] Search Function
